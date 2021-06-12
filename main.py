@@ -1,5 +1,5 @@
 import tkinter
-from tkinter import font
+from tkinter import StringVar, font
 
 root = tkinter.Tk()
 root.title('Metric Helper')
@@ -25,6 +25,20 @@ input_field.grid(row=0, column=0)
 equal_label.grid(row=0, column=1)
 output_field.grid(row=0, column=2)
 
+# create dropdowns for metric values
+metric_list =['femto', 'pico', 'nano', 'micro', 'milli', 'centi', 'base value', 'deca', 'hecto', 'kilo', 'mega', 'giga', 'tera', 'peta']
 input_field.insert(0, 'Enter your quntity')
+input_choice = StringVar()
+output_choice = StringVar()
+input_dropdown = tkinter.OptionMenu(root, input_choice, *metric_list)
+output_dropdown = tkinter.OptionMenu(root, output_choice, *metric_list)
+to_label = tkinter.Label(root, text='to', font=field_font, bg=bg_color)
+
+input_dropdown.grid(row=1, column=0)
+to_label.grid(row=1, column=1)
+output_dropdown.grid(row=1, column=2)
+
+input_choice.set('base value')
+output_choice.set('base value')
 
 root.mainloop()
