@@ -17,13 +17,13 @@ root.config(bg=bg_color)
 
 # defining layout
 # creating the input and output entry fields
-input_field = tkinter.Entry(root, width=20, font=field_font)
-output_field = tkinter.Entry(root, width=20, font=field_font)
+input_field = tkinter.Entry(root, width=20, font=field_font, borderwidth=3)
+output_field = tkinter.Entry(root, width=20, font=field_font, borderwidth=3)
 equal_label = tkinter.Label(root, text='=', font=field_font, bg=bg_color)
 
-input_field.grid(row=0, column=0)
-equal_label.grid(row=0, column=1)
-output_field.grid(row=0, column=2)
+input_field.grid(row=0, column=0, padx=10,pady=10)
+equal_label.grid(row=0, column=1,padx=10,pady=10)
+output_field.grid(row=0, column=2,padx=10, pady=10)
 
 # create dropdowns for metric values
 metric_list =['femto', 'pico', 'nano', 'micro', 'milli', 'centi', 'base value', 'deca', 'hecto', 'kilo', 'mega', 'giga', 'tera', 'peta']
@@ -43,6 +43,6 @@ output_choice.set('base value')
 
 # create the converion button
 convert_button = tkinter.Button(root, text='Convert', font=field_font, bg=button_color)
-convert_button.grid(row=2, column=0, columnspan=3)
+convert_button.grid(row=2, column=0, columnspan=3, pady=10, padx=10, ipadx=50)
 
 root.mainloop()
