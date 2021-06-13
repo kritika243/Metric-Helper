@@ -18,3 +18,9 @@ mega |
 giga |
 tera |
 peta
+
+### How it works
+
+- Enter the value to be converted
+- Select the input and output prefix
+- Click Convert
