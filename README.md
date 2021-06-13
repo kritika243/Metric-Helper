@@ -24,3 +24,5 @@ peta
 - Enter the value to be converted
 - Select the input and output prefix
 - Click Convert
+
+# ![Preview GIF](metric-helper-demo.gif)
