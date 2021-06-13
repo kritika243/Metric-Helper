@@ -27,7 +27,7 @@ def convert():
     'base value': 10**0,
     'deca': 10**1,
     'hecto': 10**2,
-    'kil0': 10**3,
+    'kilo': 10**3,
     'mega': 10**6,
     'giga': 10**9,
     'tera': 10**12,
